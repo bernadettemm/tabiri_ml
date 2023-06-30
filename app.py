@@ -135,6 +135,14 @@ descriptive_message_temp ="""
 def load_image(img):
 	im =Image.open(os.path.join(img))
 	return im
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 	
 
 def change_avatar(sex):
